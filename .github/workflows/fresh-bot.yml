@@ -1,0 +1,18 @@
+name: Bump stale issues
+
+on:
+  schedule:
+    # Run every day at 1:00 UTC
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  fresh-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run fresh-bot
+        uses: c-hive/fresh-bot@v1
+        with:
+          # Personal access token from your account with `repo` scope; it will comment as you
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
