@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run fresh-bot
-        uses: c-hive/fresh-bot@v1
+      - name: Run fresh-bot (fork with broader stale-bot match)
+        uses: Nek-12/fresh-bot@master
         with:
           # Personal access token from your account with `repo` scope; it will comment as you
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
